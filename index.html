@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html ng-app="myApp">
+
 <head>
     <title>AngularJS Dynamic Template</title>
 
@@ -8,35 +9,34 @@
     <script type="text/javascript" src="js/app.js"></script>
 
 </head>
-  <body ng-controller="MainCtrl">
+
+<body ng-controller="MainCtrl">
     <h1>Controlling input updates [Angular]</h1>
-    
+
     <div class="alert alert-info">
-      This is an example to show that the 'change' event doesn't fire <strong>in IE</strong> when pressing the 'enter' key in a field
+        This is an example to show that the 'change' event doesn't fire <strong>in IE</strong> when pressing the 'enter' key in a field
     </div>
-    
+
     <h3>Update on 'change' ('enter' keypress?}</h3>
-    <input ng-model="valueC" ng-change="check2()" ng-model-options="{updateOn : 'change'}" />
- valueC:     <span>{{valueC}}</span>
-    
+    <input ng-model="valueC" ng-change="check2()" ng-model-options="{updateOn : 'change'}" /> valueC: <span>{{valueC}}</span>
+
     <h3>Update on 'blur'</h3>
-    <input ng-model="valueB" ng-model-options="{updateOn : 'blur'}" />
- valueB:     <span>{{valueB}}</span>
- 
+    <input ng-model="valueB" ng-model-options="{updateOn : 'blur'}" /> valueB: <span>{{valueB}}</span>
+
     <h3>Live update</h3>
-    <input ng-model="valueA" />
- valueA:     <span>{{valueA}}</span>
-    
-    
-      <h3>textarea ng-maxlength=5</h3>
+    <input ng-model="valueA" /> valueA: <span>{{valueA}}</span>
+
+
+    <h3>textarea ng-maxlength=5</h3>
     <textarea name="msg" ng-model="valueD" ng-maxlength="5"></textarea>
-  
-      <div ng-if="!(vm.testObject | isEmpty)">
-  Test Object is  empty
-</div>
-<div ng-if="vm.testObject | isEmpty">
-  Test Object is notempty
-</div>
-      
-  </body>
+
+    <div ng-if="!(vm.testObject | isEmpty)">
+        Test Object is empty
+    </div>
+    <div ng-if="vm.testObject | isEmpty">
+        Test Object is notempty
+    </div>
+
+</body>
+
 </html>
