@@ -31,5 +31,12 @@
       <h3>textarea ng-maxlength=5</h3>
     <textarea name="msg" ng-model="valueD" ng-maxlength="5"></textarea>
   
+      <div ng-if="!(vm.testObject | isEmpty)">
+  Test Object is  empty
+</div>
+<div ng-if="vm.testObject | isEmpty">
+  Test Object is notempty
+</div>
+      
   </body>
 </html>
